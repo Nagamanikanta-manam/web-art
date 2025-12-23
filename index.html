@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
   </head>
+  <script>
+  if (location.pathname !== "/" && !location.pathname.startsWith("/webart")) {
+    location.replace("/webart/");
+  }
+</script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

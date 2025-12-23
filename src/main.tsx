@@ -6,7 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+   <BrowserRouter basename="/webart">
+
       <ScrollToTop />
 
       <App />
