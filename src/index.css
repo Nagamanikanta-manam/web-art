@@ -1,0 +1,215 @@
+@keyframes dotsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 1000px;
+  }
+}
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.hero-title-gradient {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  margin-top: 1.5rem;
+  text-align: center;
+  opacity: 0.85;
+  font-size: 1.05rem;
+}
+
+/* GSAP split helpers */
+.split-char,
+.split-word,
+.split-line {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* SplitText internals */
+.split-char,
+.split-word,
+.split-line {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* Gradient applied to EACH character */
+.hero-title-gradient .split-char {
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html,
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+.hero-title,
+.hero-title-gradient {
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Description */
+.hero-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin-top: 1.5rem;
+  opacity: 0.85;
+}
+
+/* Ensure step indicators never overflow the card */
+.step-indicator-row {
+  max-width: 100%;
+  overflow: hidden;
+  padding-inline: 16px; /* buffer so dots don't touch edges */
+  box-sizing: border-box;
+}
+
+/* Keep indicators centered inside available width */
+.step-indicator-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Prevent connectors from pushing dots outward */
+.step-connector {
+  flex: 1;
+  max-width: 120px; /* prevents stretching beyond container */
+}
+/* ===============================
+   STEPPER FOOTER BUTTON FIX
+   =============================== */
+
+/* Footer container spacing */
+.footer-container {
+  margin-top: 28px;
+}
+
+/* Button row alignment */
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Shared button base */
+.footer-nav button {
+  min-width: 120px;
+  height: 42px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* BACK button (secondary) */
+.back-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* NEXT / COMPLETE button (primary) */
+.next-button {
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 22px rgba(168, 85, 247, 0.35);
+}
+
+.next-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.45);
+}
+
+/* Disabled state */
+.back-button.inactive {
+  opacity: 0.4;
+  pointer-events: none;
+}
+/* ===============================
+   STEPPER FOOTER BUTTON FIX
+   =============================== */
+
+/* Footer container spacing */
+.footer-container {
+  margin-top: 28px;
+}
+
+/* Button row alignment */
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Shared button base */
+.footer-nav button {
+  min-width: 120px;
+  height: 42px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* BACK button (secondary) */
+.back-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* NEXT / COMPLETE button (primary) */
+.next-button {
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 22px rgba(168, 85, 247, 0.35);
+}
+
+.next-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.45);
+}
+
+/* Disabled state */
+.back-button.inactive {
+  opacity: 0.4;
+  pointer-events: none;
+}
